@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Devoxx France 2014 Feedback | Daniel Petisme</title>
+        <link rel="stylesheet" href="reveal.js/css/reveal.min.css">
+        <link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+        <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/fix-fontawesome-reveal-js.css">
+        <script>
+            document.write('<link rel="stylesheet" href="reveal.js/css/print/' +
+                (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') +
+                '.css" type="text/css" media="print">'
+            );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1 class="title">Devoxx France 2014 Feedback</h1>
+                    <em>Daniel Petisme</em>
+                </section>
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            # What is it?
+
+                            The French <s>Java</s> Dev/Tech Event
+                        </script>
+                    </section>
+                     <section data-markdown>
+                        <script type="text/template">
+                            # Figures                        
+                            
+                            * **2 + 1** days event
+                            * **1500** attenders
+                            * **200** speakers
+                            * **100** conferences 
+                            * **20** organizers [Paris JUG](http://www.parisjug.org)
+                        </script>
+                    </section>
+                     <section data-markdown>
+                        <script type="text/template">
+                           <img src="images/devoxx-france-2014-planning.png" alt="Planning Devoxx France 2014" />
+                        </script>
+                    </section>
+                </section>         
+                 <section>                
+                     <section data-markdown>
+                        <script type="text/template">
+                           # 1. Java
+                        </script>
+                    </section>
+                     <section data-markdown>
+                        <script type="text/template">
+                           Java 8
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                           # Forge
+                           
+                           **Makes Java EE sexy**
+
+                               project-new --named devoxx-conference --topLevelPackage org.devoxx.conf --type war --finalName devoxxjsf
+                               jpa-new-entity --named Talk
+                               jpa-new-field --named title 
+                               constraint-add --onProperty title --constraint NotNull 
+                               scaffold-setup 
+                               scaffold-generate --targets org.devoxx.conf.model.Talk
+                               rest-setup 
+                               rest-generate-endpoints-from-entities --targets org.devoxx.conf.model.Talk
+                               build
+                               // open http://localhost:8080/example                                                      
+
+                           <br />
+                           <i class="fa fa-book"></i> [http://forge.jboss.org](http://forge.jboss.org)
+                           <br/>
+                           <i class="fa fa-github"></i> [https://github.com/forge](https://github.com/forge)
+                           <br/>                                                        
+                           <i class="fa fa-github"></i> [https://github.com/agoncal/agoncal-sample-forge](https://github.com/agoncal/agoncal-sample-forge) 
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            # Image() > 1000.words
+
+                            <img src="images/forge.png" alt="Forge Demo" />
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                           # CraSh
+                           The shell for the Java Platform
+
+                           <img src="images/crash.png" alt="Crash" />
+
+                           <i class="fa fa-book"></i> [http://www.crashub.org](http://www.crashub.org)
+                           <br/>
+                           <i class="fa fa-github"></i> [https://github.com/crashub/crash](https://github.com/crashub/crash)
+                        </script>
+                    </section>
+                </section>       
+                <section>                
+                     <section data-markdown>
+                        <script type="text/template">
+                           # 2. Big Data
+                        </script>
+                    </section>
+                     <section data-markdown>
+                        <script type="text/template">
+                           # Warning
+                           
+                           <img src="images/data-science.png" alt="Data Science" />
+
+                           **IT skills aren't enought!!**
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                           # Apache Mahout
+
+                           A scalable machine learning library
+
+                           * Clustering
+                           * Filtering
+                           * Classification
+                           * etc.
+
+<br />
+                           <i class="fa fa-book"></i> [https://mahout.apache.org](https://mahout.apache.org)
+                        </script>
+                    </section>
+                </section>   
+                <section>                
+                     <section data-markdown>
+                        <script type="text/template">
+                           # 3. Docker
+
+                           <img src="images/docker.png" alt="Docker" />
+                           <br/>   
+                           <i class="fa fa-book"></i> [http://www.docker.com](http://www.docker.com)
+                           <br/>
+                           <i class="fa fa-github"></i> [https://github.com/dotcloud/docker](https://github.com/dotcloud/docker)   
+                           <br/>
+                           <i class="fa fa-youtube-play"></i> [La r&eacute;volution Docker](http://parleys.com/play/536b4364e4b04bb59f502733)
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            # What is it?
+
+                            <img src="images/docker_big_picture.png" alt="Docker Big Picture" />
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            # How to use
+                                $ java -version
+                                -bash: java: command not found
+
+                                $ docker pull lwieske/java-8
+
+                                $ docker run lwieske/java-8 java -version
+                                java version "1.8.0_05"
+                                Java(TM) SE Runtime Environment (build 1.8.0_05-b13)
+                                Java HotSpot(TM) 64-Bit Server VM (build 25.5-b02, mixed mode)
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            # How to build
+                            Dockerfile
+
+                                FROM ubuntu:14.04
+                                MAINTAINER danielpetisme <daniel.petisme@gmail.com>
+
+                                RUN apt-get update
+                                RUN apt-get -y upgrade
+                                RUN apt-get -y install software-properties-common
+                                RUN add-apt-repository ppa:webupd8team/java -y
+                                RUN apt-get update
+
+                                RUN (echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections)
+                                RUN apt-get install -y oracle-java8-installer oracle-java8-set-default
+
+                                ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+                                ENV PATH $JAVA_HOME/bin:$PATH
+                            Build
+
+                                $ docker build -t danielpetisme/java-8 .
+                        </script>
+                    </section>
+
+                </section>
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                           # 4. Misc.
+                        </script>
+                    </section>
+                </section>                    
+            </div>
+        </div>
+        <script src="reveal.js/lib/js/head.min.js"></script>
+        <script src="reveal.js/js/reveal.min.js"></script>
+        <script>
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                slideNumber: true,
+
+                theme: Reveal.getQueryHash().theme,
+                transition: Reveal.getQueryHash().transition || 'concave',
+
+                dependencies: [
+                    { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                ]
+            });
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-28365039-1', 'williamdurand.fr');
+            ga('send', 'pageview');
+        </script>
+        <a href="https://github.com/willdurand-edu/web-security-101-slides"><img style="position: absolute; top: 0; right: 0; border: 0; border-radius: none; box-shadow: none;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+    </body>
+</html>
