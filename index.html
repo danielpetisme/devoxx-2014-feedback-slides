@@ -19,7 +19,8 @@
     <div class="slides">
         <section>
             <h1 class="title">Devoxx France 2014 Feedback</h1>
-            <em>Daniel Petisme</em>
+            
+            <em>Daniel Petisme</em>            
         </section>
         <section>
             <section data-markdown>
@@ -227,13 +228,25 @@
             </section>
             <section data-markdown>
                 <script type="text/template">
+                    # France's got a talent
+                    <img src="images/codeforfrance.png" alt="Code for France" />
+
+                    * Numeric revolution **>** Industry revolution
+                    * Developer: key factor of success
+                    
+                    <br />
+                    <i class="fa fa-twitter"></i> [Code For France](https://twitter.com/CodeforFrance), [Axelle Lemaire](https://twitter.com/axellelemaire) &amp; [Tariq Krim](https://twitter.com/tariqkrim)
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
                     # Web Components
 
-                    Brace yourself, web components are coming...
+                    Brace yourself, self-made tags are coming (again)...
 
                         <super-hero heroId="1009718"></super-hero>
 
-                    Proudly powered by... Google
+                    Polymer, proudly powered by... Google
 
                     <br />
                     <i class="fa fa-book"></i> [Google Polymer](http://www.polymer-project.org/)
@@ -241,14 +254,31 @@
                     <i class="fa fa-github"></i> [Polymer Tools in Action](https://github.com/linsolas/devoxx-polymer)
                 </script>
             </section>
-            <section data-markdown>
+            <section data-markdown data-background-image="images/gopher.png" data-background-size="auto 70%" data-background-position="right center" />
                 <script type="text/template" >
                     # Go
 
-                    * Made by Google, for Google (Distribustion, Async.)
-                    * Generate native binaries (cross-compilation)
+                    * Made by Google, for Google
+                    * Generate native binaries
 
-                    <br />
+
+                        func fib(n int, c chan int) {
+                            a, b := 0, 1
+                            for i := 0; i < n; i++ {
+                              a, b = b, a+b
+                              c <- a
+                            }
+                            close(c)
+                        }
+
+                        func main() {
+                            c := make(chan int)
+                            go fib(10, c)
+                            for x := range c {
+                                fmt.Println(x)
+                            }
+                        }
+
                     <i class="fa fa-book"></i> [http://golang.org](http://golang.org)
                     <br/>
                     <i class="fa fa-youtube-play"></i> [Go pour Javaneros](http://www.parleys.com/play/5360a22ae4b0c5ba17d434fd)
@@ -283,7 +313,9 @@
         <section>
             <section data-markdown>
                 <script type="text/template" >
-                    # Thank you
+                    ## Live long and prosper
+
+                    <img src="images/spock.png" alt="Spock salute" />                                    
                 </script>
             </section>
 
